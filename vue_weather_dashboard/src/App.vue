@@ -10,12 +10,13 @@ import Content from './components/Content.vue'
 export default {
   name: 'app',
   components: {
-    'Content': Content
+    'Content': Content // 'Content' is template component name, Content is imported component
   },
   data () {
     return{
 filename : 'App.vue',
-weather_data: { // when you binding in template do not give any whitespace between v-bind: and weather_data
+// this is where you define your props to be sent. Yani bir prop gondereceksen data nin returninde tanimlamalisin
+weather_data: { // when you binding in template, do not give any whitespace between v-bind: and weather_data 
         location: "California",
         temperature: {
           current: "35 C",
